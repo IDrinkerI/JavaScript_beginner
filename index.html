@@ -4,65 +4,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework lesson1</title>
+    <title>Homework lesson2</title>
 </head>
 
 <body>
 
     <script>
-        // 1. Задать температуру в градусах по Цельсию. 
-        //    Вывести в alert соответствующую температуру в градусах по Фаренгейту. 
-        //    Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, 
-        //    где Tf – температура по Фаренгейту, Tc – температура по Цельсию.
+        // 1. Дан код:
+        //      Почему код даёт именно такие результаты?
 
-        var celsius = parseInt(prompt("Введите температуру по цельсию"));
-        var fahrenheit = celsius * 1.8 + 32;
-        alert(fahrenheit);
+        //      var a = 1, b = 1, c, d;
+
+        //  a)    c = ++a; alert(c);           // 2
+        //        Потому что оператор инкремент в префексной форме имеет приоритет
+        //        выше оператора присваивания и возвращает значение переменно увеличиной на единицу.
+
+        //  b)    d = b++; alert(d);           // 1
+        //        Теперь инеремент в постфиксной записи, его приоритет также выше оператора присваивания,
+        //        но он сначало возвращает значение переменной, а затем увеличивает её на единицу.
+
+        //  c)    c = (2 + ++a); alert(c);      // 5
+        //        Префексная форма инкремента, поведение аналогично пункту "а" только с оператором сложения.
+
+        //  d)    d = (2 + b++); alert(d);      // 4
+        //        Постфиксная форма инкремента, поведение аналогично пункту "b" только с оператором сложения.
+
+        //  e)    alert(a);                    // 3
+        //        alert(b);                    // 3
+        //        Начальное значение переменных "a" и "b" равно единице.
+        //        Затем переменные увеливались на единицу 2 раза.
+        //        Переменная "a" на шагах a) и c).
+        //        Переменная "b" на шагах b) и d).
     </script>
 
 
     <script>
-        // 2. Работа с переменными.
-        //      Объявить две переменные: admin и name. Записать в name строку «Василий»;
-        //      Скопировать значение из name в admin. Вывести admin (должно вывести «Василий»).
+        // 2. Чему будет равен x в примере ниже?
+        //     var a = 2;
+        //     var x = 1 + (a *= 2);
+        //     Переменная "х" будет равна 5;
 
-        var admin;
-        var name;
-
-        name = "Василий";
-        admin = name;
-
-        alert(admin);
-
-
-        //      Поменять местами значения переменных типа number, без использования третьей переменной
-        var a = 10;
-        var b = 20;
-
-        // Решение 1:
-        a = a + b; // a = 30, b = 20
-        b = a - b; // a = 30, b = 10
-        a = a - b; // a = 20, b = 10
-
-        // Решение 2:
-        // a = a * b; // a = 200, b = 20
-        // b = a / b; // a = 200, b = 10
-        // a = a / b; // a = 20,  b = 10
     </script>
 
 
     <script>
-        // 4. *Чему будет равно JS-выражение 1000 + "108"?
+        // 3.  Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. 
+        //     Затем написать скрипт, который работает по следующему принципу:
+        //     если a и b положительные, вывести их разность;
+        //     если а и b отрицательные, вывести их произведение;
+        //     если а и b разных знаков, вывести их сумму;
+        //     ноль можно считать положительным числом.
 
-        //     Ответ: "1000108"
+        console.log("Задание №3.");
+
+        var a = getRandom();
+        var b = getRandom();
+        console.log("a = " + a + ", b = " + b + ".");
+
+        var message;
+        var result;
+        if (a >= 0 && b >= 0) {
+            result = a - b;
+            message = "Переменные a и b положительные, их разность равна: " + result;
+        }
+        else if (a < 0 && b < 0) {
+            result = a * b;
+            message = "Переменные a и b отрицательные, их произведение равно: " + result;
+        }
+        else {
+            result = a + b;
+            message = "Переменные a и b имеют разные знаки, их сумма равна: " + result;
+        }
+        console.log(message);
+
+        function getRandom() {
+            return Math.floor(Math.random() * 41 - 20);
+        }
     </script>
 
+
     <script>
-        // 5. *Самостоятельно разобраться с атрибутами тега script (async и defer).
+        // 4. Присвоить переменной а значение в промежутке [0..15]. 
+        //    С помощью оператора switch организовать вывод чисел от a до 15.
 
-        // async - скрипт выполняется асинхронно не прерывая загрузку страницы.
+        console.log("\n\nЗадание №4.");
 
-        // defer - скрипт дожидается полной загрузки страницы перед выполнением. Работает только с внешними скриптами.
+        var a = getRandom();
+        console.log("a = " + a + ".");
+
+        switch (a) {
+            case 0:
+                console.log(0);
+            case 1:
+                console.log(1);
+            case 2:
+                console.log(2);
+            case 3:
+                console.log(3);
+            case 4:
+                console.log(4);
+            case 5:
+                console.log(5);
+            case 6:
+                console.log(6);
+            case 7:
+                console.log(7);
+            case 8:
+                console.log(8);
+            case 9:
+                console.log(9);
+            case 10:
+                console.log(10);
+            case 11:
+                console.log(11);
+            case 12:
+                console.log(12);
+            case 13:
+                console.log(13);
+            case 14:
+                console.log(14);
+            case 15:
+                console.log(15);
+        }
+
+        function getRandom() {
+            return Math.floor(Math.random() * 16);
+        }
+    </script>
+
+
+    <script>
+        // 5.  Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. 
+        //     Обязательно использовать оператор return.
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            return a / b;
+        }
+
+        // 6.  Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
+        //     где arg1, arg2 – значения аргументов, 
+        //     operation – строка с названием операции. 
+        //     В зависимости от переданного значения операции выполнить 
+        //     одну из арифметических операций (использовать функции из пункта 3) 
+        //     и вернуть полученное значение (использовать switch).
+
+        console.log("\n\nЗадание 5-6.");
+
+        function mathOperation(arg1, arg2, operation) {
+            var result;
+
+            switch (operation) {
+                case "+":
+                    result = add(arg1, arg2);
+                    break;
+                case "-":
+                    result = subtract(arg1, arg2);
+                    break;
+                case "*":
+                    result = multiply(arg1, arg2);
+                    break;
+                case "/":
+                    result = divide(arg1, arg2);
+                    break;
+
+                default:
+                    result = NaN;
+                    break;
+            }
+
+            return result;
+        }
+
+        function getRandom() {
+            return Math.floor(Math.random() * 41 - 20);
+        }
+
+        var a = getRandom();
+        var b = getRandom();
+        var result;
+        console.log("a = " + a + ", b= " + b + ".");
+
+        result = mathOperation(a, b, "+");
+        console.log("Сумма равна: " + result + ";");
+
+        result = mathOperation(a, b, "-");
+        console.log("Разность равна: " + result + ";");
+
+        result = mathOperation(a, b, "*");
+        console.log("Произведение равно: " + result + ";");
+
+        result = mathOperation(a, b, "/");
+        console.log("Частное равно: " + result.toFixed(4) + ";");
+    </script>
+
+
+    <script>
+        // 8. *С помощью рекурсии организовать функцию возведения числа в степень. 
+        //     Формат: function power(val, pow), где val – заданное число, pow – степень.
+        console.log("\n\nЗадание 8.");
+
+        var value = getRandom();
+        var pow = getRandom();
+
+        var result = power(value, pow);
+        console.log(value + " в степени " + pow + " равно: " + result + ".");
+
+        function power(value, pow) {
+            if (pow > 1) {
+                return value * power(value, pow - 1);
+            }
+            else if (pow = 1) {
+                return value;
+            }
+            else {
+                return 1;
+            }
+        }
+
+        function getRandom() {
+            return Math.floor(Math.random() * 11);
+        }
+
     </script>
 
 </body>
