@@ -4,237 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework lesson2</title>
+    <title>Homework lesson3</title>
 </head>
 
 <body>
 
     <script>
-        // 1. Дан код:
-        //      Почему код даёт именно такие результаты?
+        // 1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+        console.log("Задание 1.");
 
-        //      var a = 1, b = 1, c, d;
+        var result = [];
+        var number = 2;
+        while (number <= 100) {
+            var isPrime = true;
 
-        //  a)    c = ++a; alert(c);           // 2
-        //        Потому что оператор инкремент в префексной форме имеет приоритет
-        //        выше оператора присваивания и возвращает значение переменно увеличиной на единицу.
-
-        //  b)    d = b++; alert(d);           // 1
-        //        Теперь инеремент в постфиксной записи, его приоритет также выше оператора присваивания,
-        //        но он сначало возвращает значение переменной, а затем увеличивает её на единицу.
-
-        //  c)    c = (2 + ++a); alert(c);      // 5
-        //        Префексная форма инкремента, поведение аналогично пункту "а" только с оператором сложения.
-
-        //  d)    d = (2 + b++); alert(d);      // 4
-        //        Постфиксная форма инкремента, поведение аналогично пункту "b" только с оператором сложения.
-
-        //  e)    alert(a);                    // 3
-        //        alert(b);                    // 3
-        //        Начальное значение переменных "a" и "b" равно единице.
-        //        Затем переменные увеливались на единицу 2 раза.
-        //        Переменная "a" на шагах a) и c).
-        //        Переменная "b" на шагах b) и d).
-    </script>
-
-
-    <script>
-        // 2. Чему будет равен x в примере ниже?
-        //     var a = 2;
-        //     var x = 1 + (a *= 2);
-        //     Переменная "х" будет равна 5;
-
-    </script>
-
-
-    <script>
-        // 3.  Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. 
-        //     Затем написать скрипт, который работает по следующему принципу:
-        //     если a и b положительные, вывести их разность;
-        //     если а и b отрицательные, вывести их произведение;
-        //     если а и b разных знаков, вывести их сумму;
-        //     ноль можно считать положительным числом.
-
-        console.log("Задание №3.");
-
-        var a = getRandom();
-        var b = getRandom();
-        console.log("a = " + a + ", b = " + b + ".");
-
-        var message;
-        var result;
-        if (a >= 0 && b >= 0) {
-            result = a - b;
-            message = "Переменные a и b положительные, их разность равна: " + result;
-        }
-        else if (a < 0 && b < 0) {
-            result = a * b;
-            message = "Переменные a и b отрицательные, их произведение равно: " + result;
-        }
-        else {
-            result = a + b;
-            message = "Переменные a и b имеют разные знаки, их сумма равна: " + result;
-        }
-        console.log(message);
-
-        function getRandom() {
-            return Math.floor(Math.random() * 41 - 20);
-        }
-    </script>
-
-
-    <script>
-        // 4. Присвоить переменной а значение в промежутке [0..15]. 
-        //    С помощью оператора switch организовать вывод чисел от a до 15.
-
-        console.log("\n\nЗадание №4.");
-
-        var a = getRandom();
-        console.log("a = " + a + ".");
-
-        switch (a) {
-            case 0:
-                console.log(0);
-            case 1:
-                console.log(1);
-            case 2:
-                console.log(2);
-            case 3:
-                console.log(3);
-            case 4:
-                console.log(4);
-            case 5:
-                console.log(5);
-            case 6:
-                console.log(6);
-            case 7:
-                console.log(7);
-            case 8:
-                console.log(8);
-            case 9:
-                console.log(9);
-            case 10:
-                console.log(10);
-            case 11:
-                console.log(11);
-            case 12:
-                console.log(12);
-            case 13:
-                console.log(13);
-            case 14:
-                console.log(14);
-            case 15:
-                console.log(15);
-        }
-
-        function getRandom() {
-            return Math.floor(Math.random() * 16);
-        }
-    </script>
-
-
-    <script>
-        // 5.  Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. 
-        //     Обязательно использовать оператор return.
-
-        function add(a, b) {
-            return a + b;
-        }
-
-        function subtract(a, b) {
-            return a - b;
-        }
-
-        function multiply(a, b) {
-            return a * b;
-        }
-
-        function divide(a, b) {
-            return a / b;
-        }
-
-        // 6.  Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), 
-        //     где arg1, arg2 – значения аргументов, 
-        //     operation – строка с названием операции. 
-        //     В зависимости от переданного значения операции выполнить 
-        //     одну из арифметических операций (использовать функции из пункта 3) 
-        //     и вернуть полученное значение (использовать switch).
-
-        console.log("\n\nЗадание 5-6.");
-
-        function mathOperation(arg1, arg2, operation) {
-            var result;
-
-            switch (operation) {
-                case "+":
-                    result = add(arg1, arg2);
-                    break;
-                case "-":
-                    result = subtract(arg1, arg2);
-                    break;
-                case "*":
-                    result = multiply(arg1, arg2);
-                    break;
-                case "/":
-                    result = divide(arg1, arg2);
-                    break;
-
-                default:
-                    result = NaN;
-                    break;
+            var i = 2;
+            while (i < number) {
+                if (number % i == 0) {
+                    isPrime = false;
+                }
+                i++;
             }
 
-            return result;
+            if (isPrime) {
+                result.push(number)
+            }
+            number++;
         }
 
-        function getRandom() {
-            return Math.floor(Math.random() * 41 - 20);
-        }
+        console.log(result.join(", "));
 
-        var a = getRandom();
-        var b = getRandom();
-        var result;
-        console.log("a = " + a + ", b= " + b + ".");
-
-        result = mathOperation(a, b, "+");
-        console.log("Сумма равна: " + result + ";");
-
-        result = mathOperation(a, b, "-");
-        console.log("Разность равна: " + result + ";");
-
-        result = mathOperation(a, b, "*");
-        console.log("Произведение равно: " + result + ";");
-
-        result = mathOperation(a, b, "/");
-        console.log("Частное равно: " + result.toFixed(4) + ";");
     </script>
 
 
     <script>
-        // 8. *С помощью рекурсии организовать функцию возведения числа в степень. 
-        //     Формат: function power(val, pow), где val – заданное число, pow – степень.
-        console.log("\n\nЗадание 8.");
+        // 2. С этого урока начинаем работать с функционалом интернет-магазина. Предположим, есть сущность корзины.
+        // Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.
+        // 3. Товары в корзине хранятся в массиве. Задачи:
+        // a) Организовать такой массив для хранения товаров в корзине;
+        // b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+        console.log("\n\nЗадание 2-3.");
 
-        var value = getRandom();
-        var pow = getRandom();
+        var basketGoods = {
+            goodsList: [
+                {
+                    name: "Product 1",
+                    price: 125,
+                },
+                {
+                    name: "Product 2",
+                    price: 250,
+                },
+                {
+                    name: "Product 3",
+                    price: 375,
+                },
+            ],
 
-        var result = power(value, pow);
-        console.log(value + " в степени " + pow + " равно: " + result + ".");
+            countBasketPrice: function () {
+                var sum = 0;
+                for (var goods of this.goodsList) {
+                    sum += goods.price;
+                }
+                return sum;
+            },
 
-        function power(value, pow) {
-            if (pow > 1) {
-                return value * power(value, pow - 1);
+            goodsCount: function () {
+                return this.goodsList.length;
             }
-            else if (pow = 1) {
-                return value;
-            }
-            else {
-                return 1;
-            }
+
         }
 
-        function getRandom() {
-            return Math.floor(Math.random() * 11);
+        console.log("Товаров в корзине: " + basketGoods.goodsCount());
+        console.log("Общая стоимость товаров: " + basketGoods.countBasketPrice());
+    </script>
+
+
+    <script>
+        // 4.*Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. 
+        // Выглядеть это должно так: for(…){здесь пусто}
+        console.log("\n\nЗадание 4.");
+
+        for (var i = 0; i < 10; console.log(i++)) { }
+
+    </script>
+
+
+    <script>
+        // 5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20
+        // рядов, а не 5:
+        // x
+        // xx
+        // xxx
+        // xxxx
+        // xxxxx
+        console.log("\n\nЗадание 5.");
+
+        var size = 20;
+        var row = "";
+        for (var height = 1; height <= size; height++) {
+            while (row.length < height) {
+                row += "x";
+            }
+
+            console.log(row);
         }
 
     </script>
