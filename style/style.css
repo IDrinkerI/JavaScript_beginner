@@ -18,14 +18,14 @@
   height: 3vw;
   text-align: center;
   vertical-align: middle;
-  font-size: 2rem;
+  font-size: 2.75vw;
 }
 
 .chessboard_wrapper .chessboard-digit_cell {
   color: burlywood;
   border-right: 0.3vw solid darkgoldenrod;
   border-left: 0.3vw solid darkgoldenrod;
-  font-size: 1.5rem;
+  font-size: 2.25vw;
   font-family: 'Times New Roman', Times, serif;
 }
 
@@ -33,7 +33,7 @@
   color: burlywood;
   border-top: 0.3vw solid darkgoldenrod;
   border-bottom: 0.3vw solid darkgoldenrod;
-  font-size: 1.5rem;
+  font-size: 2.25vw;
   font-family: 'Times New Roman', Times, serif;
 }
 
