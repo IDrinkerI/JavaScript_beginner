@@ -1,0 +1,59 @@
+$PRIMARY_COLOR: brown;
+$SECONDARY_COLOR: burlywood;
+$BORDER_COLOR:  darkgoldenrod;
+$BOARD_SIZE: 30vw;
+
+.chessboard_wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+
+    .chessboard{
+        width: $BOARD_SIZE;
+        height: $BOARD_SIZE;
+        border: 0.5vw solid $BORDER_COLOR;
+        background-color: $PRIMARY_COLOR;
+        $CELL_BORDER: 0.3vw solid $BORDER_COLOR;
+
+        &-cell{
+            width: $BOARD_SIZE / 10;
+            height: $BOARD_SIZE / 10;
+            text-align: center;
+            vertical-align: middle;
+            font-size:  2.75vw;
+        }
+
+        &-digit_cell{
+            color:  $SECONDARY_COLOR;
+            border-right: $CELL_BORDER;
+            border-left: $CELL_BORDER;
+            font-size: 2.25vw;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        &-char_cell{
+            color:  $SECONDARY_COLOR;            
+            border-top: $CELL_BORDER;
+            border-bottom: $CELL_BORDER;
+            font-size: 2.25vw;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        // &-black_cell{
+
+        // }        
+    
+        &-white_cell{
+            background-color: $SECONDARY_COLOR;
+        }
+
+        // &-corner_cell{
+
+        // }
+
+        &-flipped_cell{
+            transform: rotate(180deg);
+        }        
+    }
+}

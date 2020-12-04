@@ -1,0 +1,48 @@
+.chessboard_wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.chessboard_wrapper .chessboard {
+  width: 30vw;
+  height: 30vw;
+  border: 0.5vw solid darkgoldenrod;
+  background-color: brown;
+}
+
+.chessboard_wrapper .chessboard-cell {
+  width: 3vw;
+  height: 3vw;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.75vw;
+}
+
+.chessboard_wrapper .chessboard-digit_cell {
+  color: burlywood;
+  border-right: 0.3vw solid darkgoldenrod;
+  border-left: 0.3vw solid darkgoldenrod;
+  font-size: 2.25vw;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chessboard_wrapper .chessboard-char_cell {
+  color: burlywood;
+  border-top: 0.3vw solid darkgoldenrod;
+  border-bottom: 0.3vw solid darkgoldenrod;
+  font-size: 2.25vw;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chessboard_wrapper .chessboard-white_cell {
+  background-color: burlywood;
+}
+
+.chessboard_wrapper .chessboard-flipped_cell {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */
