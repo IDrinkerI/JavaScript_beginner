@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/exercise_2.css">
+    <script defer src="./js/exercise2_goodsDB.js"></script>
+    <script defer src="./js/exercise2.js"></script>
+    <title>Exercise 2</title>
+</head>
+
+<body>
+    <!-- 2. Реализовать модуль корзины. Создать блок товаров и блок корзины.
+            У каждого товара есть кнопка «Купить», при нажатии на которую 
+            происходит добавление имени и цены товара в блок
+            корзины. Корзина должна уметь считать общую сумму заказа. -->
+
+    <div class="container">
+        <div class="shopping_basket">
+            <h2 class="shopping_basket-title">Корзина</h2>
+            <div class="shopping_list-wrapper">
+                <ul class="shopping_list" id="shopping_list"></ul>
+                <p id="total_price"></p>
+            </div>
+        </div>
+
+        <div id="product_list"></div>
+    </div>
+</body>
+
+</html>

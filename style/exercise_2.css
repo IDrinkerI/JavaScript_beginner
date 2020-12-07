@@ -1,0 +1,74 @@
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+.shopping_basket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 2px solid #000;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.shopping_basket-title {
+  font-size: 2rem;
+  width: 30%;
+}
+
+.shopping_basket .shopping_list {
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.shopping_basket .shopping_list-item {
+  font-size: 1.25rem;
+}
+
+.shopping_basket #total_price {
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+#product_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product_card {
+  width: 175px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+.product_card-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product_card-price {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.product_card-buy_button {
+  padding: 5px;
+}
+/*# sourceMappingURL=exercise_2.css.map */
