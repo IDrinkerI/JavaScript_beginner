@@ -14,7 +14,7 @@ function appointBehavior() {
     }
 
     function errorHandler(e) {
-        console.log("Image not found.\n" + e.target.src);
+        alert("Image \"" + e.target.src.match(/(?<=\/big\/).*$/) + "\" not found.");
         e.target.src = safePath;
     }
 }
