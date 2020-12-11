@@ -1,0 +1,52 @@
+.container {
+  width: 1024px;
+  margin: 0 auto;
+  padding-top: 150px;
+}
+
+#snake_game_window {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.snake-score_count {
+  font-size: 3rem;
+}
+
+.snake-game_field {
+  margin-bottom: 15px;
+  border: 2px solid #000;
+}
+
+.snake-game_field-cell {
+  background-color: lightgrey;
+  border: 1px solid #000;
+}
+
+.snake-game_field-food {
+  background-color: yellow;
+}
+
+.snake-game_field-obstacle {
+  background-color: red;
+}
+
+.snake-game_field-snake_body {
+  background-color: green;
+}
+
+.snake-button_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.snake-button {
+  font-size: 2rem;
+  padding: 5px 15px;
+  width: 202.5px;
+}
+/*# sourceMappingURL=style.css.map */
